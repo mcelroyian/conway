@@ -17,6 +17,13 @@
         <![endif]-->
         <h1>Conway's Game of Life</h1>
         <div id="wrapper">
+            <div id="controls">
+                <button onclick=startLoop()>Start</button>
+                <button onclick=pauseLoop()>Pause</button>
+                <button onclick=newStart()>New Start</button>
+
+            </div>
+            <h2>Current Generation: <span id="generation">0</span></h2>
             <canvas id='conway'></canvas>
         </div>
         
