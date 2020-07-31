@@ -1,0 +1,117 @@
+html, body {
+    font-size: 18px;
+}
+
+#conway {
+    border: 1px solid green;
+}
+#wrapper {
+    width: 1024px;
+    margin: 0 auto;
+    background-color: lightblue;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+}
+
+#glider-copy {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: aquamarine;
+    background-image: url('glider.png');
+    z-index: 100;
+}
+
+nav {
+    width: 100%;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px solid black
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+#left {
+    width:60%;
+}
+
+#right {
+    width: 30%;
+}
+
+button {
+    height: 3em;
+    width: 8em;
+}
+
+p, h1, h2, h3, h4, h5, h6, img {
+    margin-left: 15px;
+}
+
+#rules {
+    margin-right: 3em;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.shape {
+    border: 1px solid darkblue;
+}
+
+.active {
+    background-color: cadetblue;
+    border: 1px solid red;
+}
+
+.shape:hover {
+    background-color: cadetblue;
+    border: 1px solid red;
+
+}
+
+p, li {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.8em;
+}
+
+li {
+    list-style: none;
+    line-height: 1.5em;
+}
+
+#controls-menu {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-inline-start: 0;
+}
+
+#controls-menu li {
+
+    text-align: center;
+    padding: .5em 1.2em;
+    border: 1px solid black
+
+}
+
+#controls-menu li:hover {
+    background-color: bisque;
+}
+
+.hidden {
+    display: none;
+}
