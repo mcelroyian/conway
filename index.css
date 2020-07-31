@@ -2,10 +2,14 @@
     border: 1px solid green;
 }
 #wrapper {
-    display: flex;
-    justify-content: space-around;
+    width: 1024px;
     width: 90%;
     margin: 0 auto;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
 }
 
 #glider-copy {
@@ -15,4 +19,16 @@
     background-color: aquamarine;
     background-image: url('glider.png');
     z-index: 100;
+}
+
+nav {
+    width: 100%;
+}
+
+#left {
+    width:60%;
+}
+
+#right {
+    width: 30%;
 }
