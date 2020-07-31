@@ -104,22 +104,23 @@ function rotateStamp() {
 
 function selectStamp(stamp) {
     console.log('stamp')
-    switch(stamp) {
-        case 'glider':
-            console.log("glider")
-            CURRENT_STAMP = gliderMatrix
-            console.log(CURRENT_STAMP)
-            break;
-        case 'med-ship':
-            console.log("med-ship")
-            CURRENT_STAMP = middleSpaceShip
-            break;
-        case 'pulsar':
-            CURRENT_STAMP = pulsar
-            break;
-        default:
-            CURRENT_STAMP = null
-    }
+        switch(stamp) {
+            case 'glider':
+                console.log("glider")
+                CURRENT_STAMP = gliderMatrix
+                console.log(CURRENT_STAMP)
+                break;
+            case 'med-ship':
+                console.log("med-ship")
+                CURRENT_STAMP = middleSpaceShip
+                break;
+            case 'pulsar':
+                CURRENT_STAMP = pulsar
+                break;
+            default:
+                CURRENT_STAMP = null
+        }
+
 }
 
 
@@ -270,4 +271,14 @@ function rotate(matrix) {
         }
     }
     return matrix
+}
+
+function showSize() {
+    let controls = document.getElementById("controls-grid")
+    controls.classList.toggle("hidden")
+}
+
+function toggleStamp(e) {
+    let shape = e.currentTarget
+    shape.classList.toggle("active")
 }

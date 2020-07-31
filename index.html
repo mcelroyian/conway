@@ -24,53 +24,9 @@
     <div id="wrapper">
       <nav>
         <h1>Conway's Game of Life</h1>
-      </nav>
-      <section>
-        <div id="left">
-          <div id="controls">
-            <button onclick="startLoop()">Start</button>
-            <button onclick="pauseLoop()">Pause</button>
-            <button onclick="clearGrid()">Clear</button>
-            <button onclick="newStart()">New Start</button>
-            <ul>
-              <li onclick="changeSize(25)">25 Rows</li>
-              <li onclick="changeSize(50)">50 Rows</li>
-              <li onclick="changeSize(75)">75 Rows</li>
-            </ul>
-          </div>
-          <h2>Current Generation: <span id="generation">0</span></h2>
-          <canvas id="conway"></canvas>
-        </div>
-        <div id="right">
-          <h2>Shapes</h2>
-          <div>
-            <h3>Glider</h3>
-            <!-- <div id='glider-copy'></div> -->
-            <img id="glider" src="glider-white.png" alt="glider pattern" />
-            <p>A glider that moves across the grid</p>
-            <button onclick="selectStamp('glider')">Select</button>
-            <button onclick="rotateStamp()">Rotate</button>
-            <button onclick="selectStamp()">Cancel</button>
-          </div>
-          <div>
-            <h3>Small Spaceship</h3>
-            <img
-              id="med-ship"
-              src="ship-white.png"
-              alt="Small Spaceship pattern"
-            />
-            <p>A Spaceship that moves across the grid</p>
-            <button onclick="selectStamp('med-ship')">Select</button>
-            <button onclick="selectStamp()">Cancel</button>
-          </div>
-          <div>
-            <h3>Pulsar</h3>
-            <img id="pulsar" src="pulsar-white.png" alt="Pulsar pattern" />
-            <p>A cool pulsar pattern</p>
-            <button onclick="selectStamp('pulsar')">Select</button>
-            <button onclick="selectStamp()">Cancel</button>
-          </div>
-          <h2>Rules</h2>
+        <div id='rules'>
+        
+        <h4>Rules</h4>
           <ul>
             <li>
               If the cell is alive and has 2 or 3 neighbors, then it remains
@@ -81,6 +37,69 @@
               life. Else if remains dead.
             </li>
           </ul>
+        </div>
+      </nav>
+      <section>
+        <div id="left">
+          <div id="controls">
+            <!-- <button onclick="startLoop()">Start</button>
+            <button onclick="pauseLoop()">Pause</button>
+            <button onclick="clearGrid()">Clear</button>
+            <button onclick="newStart()">New Start</button> -->
+            
+            <ul id="controls-menu">
+                <li onclick="startLoop()">Start</li>
+                <li onclick="pauseLoop()">Pause</li>
+                <li onclick="clearGrid()">Clear</li>
+                <li onclick="newStart()">New Start</li>
+                <li onclick="showSize()"> Size
+                <ul id='controls-grid' class='hidden'>
+                    <li onclick="changeSize(25)">25 Rows</li>
+                    <li onclick="changeSize(50)">50 Rows</li>
+                    <li onclick="changeSize(75)">75 Rows</li>
+                </ul>
+            </li>
+            </ul>
+          </div>
+          <h2>Current Generation: <span id="generation">0</span></h2>
+          <canvas id="conway"></canvas>
+        </div>
+        <div id="right">
+          <h2>Shapes</h2>
+          <!-- <div class='shape active' onclick='toggleStamp(event)'>
+            <h3>Small Dot</h3>
+            <p>Fill in a single cell</p>
+            <button onclick="selectStamp('med-ship')">Select</button>
+            <button onclick="selectStamp()">Cancel</button>
+          </div> -->
+          <div class='shape'>
+            <h3>Glider</h3>
+            <!-- <div id='glider-copy'></div> -->
+            <img id="glider" src="glider-white.png" alt="glider pattern" />
+            <p>A glider that moves across the grid</p>
+            <button onclick="selectStamp('glider')">Select</button>
+            <button onclick="rotateStamp()">Rotate</button>
+            <button onclick="selectStamp()">Cancel</button>
+          </div>
+          <div class='shape' >
+            <h3>Small Spaceship</h3>
+            <img
+              id="med-ship"
+              src="ship-white.png"
+              alt="Small Spaceship pattern"
+            />
+            <p>A Spaceship that moves across the grid</p>
+            <button onclick="selectStamp('med-ship')">Select</button>
+            <button onclick="selectStamp()">Cancel</button>
+          </div>
+          <div class='shape' >
+            <h3>Pulsar</h3>
+            <img id="pulsar" src="pulsar-white.png" alt="Pulsar pattern" />
+            <p>A cool pulsar pattern</p>
+            <button onclick="selectStamp('pulsar')">Select</button>
+            <button onclick="selectStamp()">Cancel</button>
+          </div>
+          
         </div>
       </section>
     </div>
